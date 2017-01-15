@@ -7,7 +7,7 @@ module.exports = {
     production: {
       user: 'ec2-user',
       host: 'ec2-52-56-47-88.eu-west-2.compute.amazonaws.com',
-      key: 'C:\ssh\devjw.pem',
+      key: '~/.ssh/devjw.pem',
       ref: 'origin/master',
       repo: 'https://github.com/jackowild/devjw.com.git',
       path: '/home/ec2-user/devjw',
