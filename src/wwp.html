@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#reset').click(function(){
+			$('#protein').val('');
+			$('#carbs').val('');
+			$('#fat').val('');
+			$('#fiber').val('');
+		});
+
+		$('#calculate').click(function(){
+			var points = 0;
+
+			try {
+				var protein = parseFloat($('#protein').val());
+				var carbs = parseFloat($('#carbs').val());
+				var fat = parseFloat($('#fat').val());
+				var fiber = parseFloat($('#fiber').val());
+
+				points = Math.round(((16 * protein) + (19 * carbs) + (45 * fat) + (5 * fiber)) / 175);
+			}
+			catch (e) {
+
+			}
+
+			$('#points').html(points + ' points');
+		});
+	});
+</script>
+</head>
+<body>
+<div data-role="page">
+
+  <div data-role="header">
+    <h1>WW Points</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+	<label for="protein">Protein:</label>
+  	<input type="text" id="protein" data-clear-btn="true">
+  	
+  	<label for="carbs">Carbs:</label>
+  	<input type="text" id="carbs" data-clear-btn="true">
+  	
+  	<label for="fat">Fat:</label>
+  	<input type="text" id="fat" data-clear-btn="true">
+  	
+  	<label for="fiber">Fiber:</label>
+  	<input type="text" id="fiber" data-clear-btn="true">
+    
+    <input id="calculate" type="button" value="Calculate">
+    <input id="reset" type="button" value="Reset">
+    <p id="points" style="text-align: center;">0 points</p>
+  </div>
+
+</div>
+</body>
+</html>

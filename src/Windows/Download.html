@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DevJW, Home of the HyperDeck Controller">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+
+    <title>DevJW, Home of the HyperDeck Controller</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DevJW</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mac<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="../Mac/index.html">Home</a></li>
+                <li><a href="../Mac/GettingStarted.html">Getting started</a></li>
+                <li><a href="../Mac/Download.html">Download</a></li>
+              </ul>
+            </li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Windows BETA<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="GettingStarted.html">Getting started</a></li>
+                <li><a href="Download.html">Download</a></li>
+              </ul>
+            </li>
+            <li><a href="../Support.html">Support</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="main">
+        <br>
+        <h2 style="text-align:center">Download HyperDeck Controller for Windows BETA</h2>
+        <hr>
+		
+		<div class="row" style="text-align:center">
+            <a target="_blank" href="http://devjw.com/hyperdeck/HyperDeck%20Controller%20v0.08.zip"class="btn btn-lg btn-default hit">Download HyperDeck Controller for Windows BETA 0.08</a>
+        </div>
+		
+		<h3>Changelog:</h3>
+			v0.08:
+              <ul>
+				<li>Added ability to specify default IP address when running from the command line.</li>
+              </ul>
+              
+			  <br/>
+			  v0.07:
+              <ul>
+                <li>
+					Keyboard shortcuts:
+					<ul>
+						<li>Ctrl+P = Play</li>
+						<li>Ctrl+R = Record</li>
+						<li>Ctrl+(1-8) = Play speed 1-8</li>
+					</ul>
+				</li>
+				<li>Changed loop button functionality so that it loops the current clip instead of all clips.</li>
+                <li>Window can be resized.</li>
+              </ul>
+		
+		<br>		
+		<h3>Requirements</h3>
+		  <big>
+			  <ul>
+				<li>A BlackMagic Design HyperDeck Studio or Studio Pro on firmware version 4.1 or later.</li>
+				<li>A Windows PC running XP or later.</li>
+				<li>Microsoft .NET Framework 3.5 or later.</li>
+			  </ul>
+		  </big>
+		  
+		  <br>
+		  
+		  <h3>Previous versions</h3>
+		  <a target="_blank" href="http://devjw.com/hyperdeck/HyperDeck%20Controller%20v0.07.zip">HyperDeck Controller for Windows BETA 0.07</a>
+		  <br/>
+		  <a target="_blank" href="http://devjw.com/hyperdeck/Hyperdeck%20Ethernet%20Controller%20(v0.06).zip">HyperDeck Controller for Windows BETA 0.06</a>
+
+        <br>
+        <hr width="100%">
+        <div class="footer">
+          <p>&copy; DevJW 2015</p>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(".hit").click(function () {
+        $.get('http://devjw.com/services/DownloadHit.php');
+      });
+    </script>
+  </body>
+</html>

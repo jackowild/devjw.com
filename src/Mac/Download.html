@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DevJW, Home of the HyperDeck Controller">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+
+    <title>DevJW, Home of the HyperDeck Controller</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">DevJW</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mac<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="GettingStarted.html">Getting started</a></li>
+                <li><a href="Download.html">Download</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Windows BETA<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="../Windows/index.html">Home</a></li>
+                <li><a href="../Windows/GettingStarted.html">Getting started</a></li>
+                <li><a href="../Windows/Download.html">Download</a></li>
+              </ul>
+            </li>
+            <li><a href="../Support.html">Support</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="cover">
+        <h1>HyperDeck Controller for Mac</h1>
+        <p class="lead">
+          Remote control your Blackmagic Design™ HyperDeck Studio device from your Mac.
+          <br><br><a href='https://itunes.apple.com/us/app/hyperdeck-controller/id846220193?ls=1&mt=12' target="_blank"><img src='../img/appstore.svg'></a>
+        </p>
+
+        <br>
+        <div class="footer">
+          <p>&copy; DevJW 2015</p>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(".hit").click(function () {
+        $.get('http://devjw.com/services/DownloadHit.php');
+      });
+    </script>
+  </body>
+</html>
