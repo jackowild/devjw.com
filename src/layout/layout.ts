@@ -1,3 +1,3 @@
-angular.module("app").component("layout", {
+export const layout = {
     template: "Layout component"
-});
+}
