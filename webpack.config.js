@@ -8,10 +8,11 @@ const config = {
     },
     output: {
         path: __dirname + "/dist",
-        filename: "[name].bundle.js" // prepend with [chunkhash] to get a hash
+        filename: "[name].bundle.js", // prepend with [chunkhash] to get a hash
+        publicPath: "/assets/",
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin(["vendor"])
+        new webpack.optimize.CommonsChunkPlugin(["vendor"]),
     ]
 };
 

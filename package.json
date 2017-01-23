@@ -4,6 +4,8 @@
   "description": "devjw.com",
   "main": "index.js",
   "scripts": {
+    "build": "node_modules/.bin/webpack && cp-cli src/index.html dist/index.html",
+    "start": "webpack-dev-server --content-base dist/",
     "deploy": "pm2 deploy ecosystem.config.js production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +28,7 @@
     "@types/angular": "^1.6.2",
     "pm2": "^2.2.3",
     "typescript": "^2.1.5",
-    "webpack": "^2.2.0"
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
   }
 }
