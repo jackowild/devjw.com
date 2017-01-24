@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     context: __dirname + '/src',
@@ -16,6 +17,9 @@ const config = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin(["vendor"]),
+        new HtmlWebpackPlugin({
+            template: 'index.html'
+        })
     ],
     module: {
         rules: [
@@ -33,7 +37,7 @@ const config = {
                 test: /\.ts$/,
                 loader: 'ts-loader',
                 exclude: /node_modules/
-            }
+            },
         ]
     },
     devServer: {
