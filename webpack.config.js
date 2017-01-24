@@ -3,8 +3,11 @@ var webpack = require('webpack');
 const config = {
     context: __dirname + '/src',
     entry: {
-        app: './app.module.js',
+        app: './app.module.ts',
         vendor: ['angular']
+    },
+    resolve: {
+        extensions: ['.ts', '.js']
     },
     output: {
         path: __dirname + "/dist",
@@ -13,7 +16,30 @@ const config = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin(["vendor"]),
-    ]
+    ],
+    module: {
+        rules: [
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                loader: "source-map-loader"
+            },
+            {
+                enforce: 'pre',
+                test: /\.ts$/,
+                use: "source-map-loader"
+            },
+            { 
+                test: /\.ts$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/
+            }
+        ]
+    },
+    devServer: {
+        contentBase: "dist/"
+    },
+    devtool: 'inline-source-map',
 };
 
-module.exports=config;
+module.exports = config;

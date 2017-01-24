@@ -27,6 +27,8 @@
   "devDependencies": {
     "@types/angular": "^1.6.2",
     "pm2": "^2.2.3",
+    "source-map-loader": "^0.1.6",
+    "ts-loader": "^2.0.0",
     "typescript": "^2.1.5",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"
