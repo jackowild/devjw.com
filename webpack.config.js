@@ -1,10 +1,11 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
     context: __dirname + '/src',
     entry: {
-        app: './app.module.ts',
+        app: './app.js',
         vendor: ['angular']
     },
     resolve: {
@@ -19,7 +20,8 @@ const config = {
         new webpack.optimize.CommonsChunkPlugin(["vendor"]),
         new HtmlWebpackPlugin({
             template: 'index.html'
-        })
+        }),
+        new ExtractTextPlugin("styles.css")
     ],
     module: {
         rules: [
@@ -38,6 +40,10 @@ const config = {
                 loader: 'ts-loader',
                 exclude: /node_modules/
             },
+            {
+                test: /\.scss$/,
+                loaders: ExtractTextPlugin.extract({fallbackLoader:'style-loader', loader:'css-loader!sass-loader'})
+            }
         ]
     },
     devServer: {
