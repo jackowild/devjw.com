@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = {
     context: __dirname + '/src',
     entry: {
-        app: './app.js',
+        app: './app',
         vendor: ['angular']
     },
     resolve: {
@@ -42,7 +42,7 @@ const config = {
             },
             {
                 test: /\.scss$/,
-                loaders: ExtractTextPlugin.extract({fallbackLoader:'style-loader', loader:'css-loader!sass-loader'})
+                loaders: ExtractTextPlugin.extract({fallbackLoader:'style-loader', loader:'css-loader!postcss-loader!sass-loader'})
             }
         ]
     },
