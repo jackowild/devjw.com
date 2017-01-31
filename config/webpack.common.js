@@ -6,8 +6,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = {
     context: path.resolve(__dirname, "../src"),
     entry: {
-        app: './app',
-        vendor: ['angular']
+        vendor: './vendor',
+        app: './main',
     },
     resolve: {
         extensions: ['.ts', '.js']
@@ -18,6 +18,10 @@ const config = {
         publicPath: "/",
     },
     plugins: [
+        new webpack.ContextReplacementPlugin(
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            __dirname
+        ),
         new webpack.optimize.CommonsChunkPlugin(["vendor"]),
         new HtmlWebpackPlugin({
             template: 'index.html'
