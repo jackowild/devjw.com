@@ -50,11 +50,7 @@ const config = {
                 loaders: ExtractTextPlugin.extract({fallbackLoader:'style-loader', loader:'css-loader!postcss-loader!sass-loader'})
             }
         ]
-    },
-    devServer: {
-        contentBase: path.resolve(__dirname, "../dist/")
-    },
-    devtool: 'inline-source-map',
+    }
 };
 
 module.exports = config;
