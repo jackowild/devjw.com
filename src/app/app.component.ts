@@ -3,9 +3,12 @@ import { Component } from '@angular/core'
 @Component({
     selector: 'devjw-app',
     template: `
-        <h1>{{title}}</h1>
+        <test-component [testData]="testData"></test-component>
     `
 })
 export class AppComponent {
-    title = 'DevJW';
+    testData = { 
+        property1: "hello",
+        property2: 1
+    };
 }
